@@ -64,9 +64,10 @@ public void displayLosingMessage()
     {
       for(int c = 0; c < NUM_COLS; c++)
       {
-        if(buttons[r][c].isClicked() == true && bombs.contains(this)) 
-        { 
-          buttons[(NUM_ROWS/2)][(NUM_COLS/2)].setLabel("YOU LOSE!!!");
+        if (bombs.contains(buttons[r][c]))
+        {
+          buttons[NUM_ROWS/4][(NUM_COLS/2)-6].setLabel("YOU");
+          buttons[NUM_ROWS/4][(NUM_COLS/2)-4].setLabel("LOSE");
         }
       }
     }
